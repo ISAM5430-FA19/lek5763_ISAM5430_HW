@@ -8,8 +8,9 @@ namespace B1
         {
             int count = 0;
             int sum = 0;
-            decimal avg = 0m;
             int max = int.MinValue;
+
+
 
             while (true)
             {
@@ -34,13 +35,36 @@ namespace B1
                     }
                     else
                     {
-                        Console.WriteLine("Invalid score");  
+                        break;
                     }
                 }
             }
-            avg = sum / count;
-            Console.WriteLine($"Average score is {avg}");
+            decimal avg = (decimal)sum / count;
+            Console.WriteLine($"Average score is {avg:F}");
             Console.WriteLine($"Best score is {max}");
         }
     }
 }
+
+
+
+        
+
+
+
+
+
+
+ 
+
+    
+
+
+
+       
+       
+         
+
+             
+            
+       

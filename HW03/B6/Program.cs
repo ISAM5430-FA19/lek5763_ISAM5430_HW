@@ -10,36 +10,38 @@ namespace B6
             int min = int.MaxValue;
             int n = 1;
             string display = "";
-            Console.WriteLine("Enter a possitive number");
-            n = int.Parse(Console.ReadLine());
 
             while (n > 0)
             {
-
-                count++;
-                 
+                Console.WriteLine("Enter a possitive number");
+                n = int.Parse(Console.ReadLine());
+                if (n <= 0)
+                {
+                    if(min != int.MaxValue)
+                    {
+                        count++;
+                   
+                    }
+                    break;   
+                }
+                display += n + ", ";
                 if (n < min)
                 {
                     min = n;
                 }
                 else if (n >= min * min)
                 {
-                    count++;
-                    display += n + "|";
+                    display = display.Remove(display.Length - 2);
+                    display += " | ";
                     Console.WriteLine(display);
-                    Console.WriteLine($"Number of sets: {count}");
-                    Console.WriteLine("Enter a possitive number");
-                    n = 1;
-                    count = 0;
+                    count++;
                     min = int.MaxValue;
                 }
-                if (count != 0)
-                {
-                    display += n + ", ";
-                }
             }
-            Console.WriteLine($"Number of sets: {count}");
+            display += n;
             Console.WriteLine(display);
+            Console.WriteLine($"Number of sets: {count}");
+            
         }
     }
 }
