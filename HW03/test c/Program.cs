@@ -1,24 +1,25 @@
 ﻿using System;
 
-namespace C10
+namespace test_c
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter an integer");
+            Console.WriteLine("Enter a non-negative number");
             int n = int.Parse(Console.ReadLine());
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
-                Console.Write("X");
-                for (int j = 1; j < n; j++)
+                for (int j = 1; j <= i; j++)
                 {
-                    Console.Write("X");    
+                    Console.Write(j + ",");
                 }
                 Console.WriteLine();
             }
         }
     }
-
 }
- 
+
+
+
+

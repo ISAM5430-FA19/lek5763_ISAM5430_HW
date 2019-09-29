@@ -1,23 +1,21 @@
 ﻿using System;
 
-namespace B2
+namespace B3
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int sum = 0;
-            int p = 0; // variable for previous number
+            int largest = int.MinValue;
             int count = 0;
-
+            
             while (true)
             {
-                Console.WriteLine("Enter a number");
+                Console.WriteLine("Enter a sequence of increasing numbers");
                 int n = int.Parse(Console.ReadLine());
-                if (p != n || count == 0)
+                if ( largest < n || count == 0)
                 {
-                    p = n;
-                    sum += n;
+                    largest = n;
                     count++;
                 }
                 else
@@ -25,10 +23,7 @@ namespace B2
                     break;
                 }
             }
-            Console.WriteLine($"Sum: {sum}");
+            Console.WriteLine($"The largest value is {largest}");
         }
     }
 }
-
- 
-
