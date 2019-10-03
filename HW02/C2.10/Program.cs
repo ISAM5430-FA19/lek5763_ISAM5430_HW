@@ -6,7 +6,7 @@ namespace C2._10
     {
         static void Main(string[] args)
         {
-            decimal num = 100;
+            decimal num = 100m;
             while ((num >= 1) && (num <= 100))
             {
                 Console.WriteLine(num);
