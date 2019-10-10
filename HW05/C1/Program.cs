@@ -16,15 +16,15 @@ namespace C1
         //StudentInfo method
         public void StudentInfo()
         {
-            //if (string.IsNullOrEmpty || GPA < 0)
-            //{
-                //Console.WriteLine("Invalid information enetered");
-                //return;
-            //}
-            //else
-            //{
-                Console.WriteLine($"Student name is: {LastName}, {FirstName}\nGPA: {GPA}");
-           // }
+            if (string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(FirstName) || GPA < 0)
+            {
+                Console.WriteLine("Invalid name or gpa enetered");
+                return;
+            }
+            else
+            {
+                Console.WriteLine($"Student name: {LastName}, {FirstName}\nGPA: {GPA}");
+            }
         }
     }
     class StudentTest
