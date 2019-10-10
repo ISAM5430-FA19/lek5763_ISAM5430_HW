@@ -10,11 +10,8 @@ namespace B2._5
             char a = 'A';
             char b = 'B';
             char c = 'C';
-            //bool vowela = false;
-            //bool vowelb = false;
-            //bool vowelc = false;
             int vowels = 0;
-            //int consonants = 0;
+             
             WriteLine("Part a: 2 letter, 3- letter words at least 1 vowel");
             for (a = 'A'; a <= 'H'; a++)
             {
